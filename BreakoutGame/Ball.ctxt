@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Ball
+comment0.text=\r\n\ Class\ which\ represents\ a\ ball\ bouncing\ around\ the\ game\ world,\ between\ the\ paddle\ and\ blocks\ and\ the\ edges\ etc.\r\n
+comment1.params=held\ powerup\ yspeed
+comment1.target=Ball(boolean,\ boolean,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=w
+comment3.target=void\ collisionPhysics(GameWorld)
+comment4.params=w
+comment4.target=void\ loseTurn(GameWorld)
+comment5.params=w
+comment5.target=void\ heldBehaviour(GameWorld)
+comment6.params=w
+comment6.target=void\ speedCalculation(GameWorld)
+comment7.params=w
+comment7.target=void\ checkForWinCondition(GameWorld)
+numComments=8

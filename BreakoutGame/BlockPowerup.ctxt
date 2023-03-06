@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=BlockPowerup
+comment0.text=\r\n\ BlockPowerup\ is\ an\ enum\ that\ represents\ the\ different\ powerups\ a\ block\ might\ contain,\ and\ takes\ effect\ upon\ block\ collision\r\n\ CREATEBALL\ \=\ adds\ new\ ball\ to\ world\ -\ powerup-created\ balls\ have\ a\ fixed\ speed\ of\ GameWorld.BASE_YSPEED\ and\ doesn't\ increase\ for\ balance\ purposes-ish\r\n\ PADDLESIZE\ \=\ increases\ paddle\ size\r\n\ EXTRALIFE\ \=\ add\ one\ extra\ life\r\n
+comment1.params=
+comment1.target=BlockPowerup\ random()
+comment2.params=bl
+comment2.target=void\ applyImagery(Block)
+comment3.params=w\ b
+comment3.target=void\ applyPowerupEffectsToWorld(GameWorld,\ Block)
+numComments=4

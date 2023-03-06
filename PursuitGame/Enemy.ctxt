@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Enemy
+comment0.text=\r\n\ Actor\ class\ representing\ the\ main\ enemy\ of\ the\ game\r\n\ Collision\ with\ the\ player\ causes\ in\ a\ life\ loss\r\n\ Collision\ when\ player\ lives\ is\ 1\ -->\ death/game\ over\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=Enemy()
+numComments=3

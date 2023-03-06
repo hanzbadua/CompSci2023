@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=BlockStrength
+comment0.text=\r\n\ BlockStrength\ is\ an\ enum\ that\ represents\ different\ block\ strengths\ (identified\ by\ color)\r\n\ Hitting\ a\ block\ with\ a\ ball\ decreases\ the\ block\ strength\ by\ one\ enumeration\ value\ (THREE->TWO->ONE)\r\n\ If\ the\ block\ is\ already\ at\ min\ strength\ (one/green)\ then\ the\ block\ is\ destroyed\ (ONE->null)\r\n\ \r\n\ Also\ has\ multiple\ helper\ methods\r\n\ \r\n\ Strength/color\ block\ correspondance\:\r\n\ One/green\r\n\ Two/orange\r\n\ Three/red\r\n
+comment1.params=
+comment1.target=greenfoot.Color\ getColor()
+comment2.params=
+comment2.target=BlockStrength\ downgrade()
+comment3.params=
+comment3.target=BlockStrength\ random()
+numComments=4

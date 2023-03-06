@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=GameWorld
+comment0.text=\r\n\ Breakout,\ kinda\r\n\ Move\ the\ paddle\ using\ the\ mouse,\ launch\ a\ ball\ by\ clicking\r\n\ Other\ instructions\ will\ be\ displayed\ via\ text\ ingame\ (such\ as\ block\ column\ configuration)\r\n\ \r\n\ The\ goal/win\ condition\ is\ to\ destroy\ all\ the\ blocks\ using\ the\ paddle+balls\r\n\ However\ if\ your\ main\ (white)\ ball\ goes\ out\ of\ bounds\ by\ missing\ the\ paddle\ and\ hitting\ the\ bottom,\ you\ lose\ a\ life\ and\ all\ balls\ disappear\r\n\ If\ you\ have\ a\ life\ remaining\ it\ is\ used\ up\ to\ summon\ a\ new\ ball,\ if\ you\ have\ no\ more\ lives\ though\ then\ you\ lose\r\n\ \r\n\ (you\ start\ with\ two\ lives\ I\ think,\ can\ be\ configured\ in\ code\ below\ if\ it's\ too\ hard)\r\n\ \r\n\ Your\ main\ ball\ vertical\ speed\ is\ based\ on\ your\ score,\ your\ score\ increments\ for\ every\ ball/block\ collision\ (well\ not\ exactly\ 1\:1,\ see\r\n\ Horizontal\ speed\ is\ based\ on\ the\ ball\ colliding\ with\ the\ paddle,\ the\ further\ away\ from\ the\ paddle\ center\ \=\ the\ faster,\ respecting\ direction\r\n\ Blocks\ have\ different\ strengths,\ the\ hierarchy\ being\ red->orange->green\ blocks\r\n\ Hitting\ a\ block\ with\ a\ ball\ causes\ the\ block\ to\ downgrade\ one\ strength,\ however\ if\ the\ block\ is\ already\ at\ the\ lowest\ strength\ (green)\r\n\ The\ block\ is\ destroyed\ instead\ and\ disappears\r\n\ \r\n\ Blocks\ also\ contain\ different\ powerups,\ consumed\ upon\ collision\ and\ corresponding\ to\ images/shapes\ on\ the\ blocks\r\n\ Rectangle\ \=\ increases\ paddle\ size\r\n\ Single\ circle\ \=\ adds\ a\ yellow/"powerup"\ ball;\ powerup\ balls\ will\ NOT\ cause\ you\ to\ lose\ a\ life\ when\ it\ goes\ out\ of\ bounds,\ and\ will\ instead\ just\ disappear\ (for\ game\ balance\ purposes)\r\n\ Powerup\ balls\ also\ have\ a\ fixed,\ unchangeable\ speed\ for\ once\ again,\ game\ balance\ purposes\ (high\ score\ +\ multiple\ balls\ \=\ too\ fast\ and\ too\ much\ balls\ and\ you\ will\ lose)\r\n\ Double\ circle\ \=\ gives\ you\ an\ extra\ life\r\n\ \r\n\ Quirks\:\ No\ horizontal\ speed\ (occurs\ when\ ball\ hits\ center\ of\ paddle)\ \=\ vertical\ speed\ is\ temporarily\ faster\ as\ a\ difficulty\ compensation\r\n\ And\ probably\ more\ that\ I\ forgot\ about\r\n\ \r\n\ Bugs\:\ Colliding\ with\ two\ blocks\ at\ once\ might\ only\ increment\ score\ by\ one\r\n\ Certain\ block\ corner\ collision\ angles\ might\ make\ the\ ball\ goofy,\ or\ something\ like\ that\r\n\ \r\n\ And\ I\ think\ that's\ it,\ who\ knows\r\n\ \r\n\ @author\ (Hanz\ Badua)\ \r\n\ @version\ (28\ February\ 2023)\r\n
+comment1.params=
+comment1.target=GameWorld()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ generateBlocks()
+comment4.params=
+comment4.target=void\ debugModeStuff()
+comment5.params=
+comment5.target=void\ menu()
+numComments=6

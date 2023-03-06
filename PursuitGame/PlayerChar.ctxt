@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=PlayerChar
+comment0.text=\r\n\ Class\ representing\ the\ actor\ that\ the\ player\ controls\r\n\ (which\ is\ a\ rocket\ ship)\r\n\ See\ the\ comments\ on\ the\ movement()\ method\ for\ possible\ keypresses\r\n
+comment1.params=p\ s
+comment1.target=PlayerChar(int,\ int)
+comment10.params=
+comment10.target=int\ getStartingLives()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ movement()
+comment4.params=
+comment4.target=void\ fireProjectile()
+comment5.params=
+comment5.target=void\ powerupInteraction()
+comment6.params=
+comment6.target=void\ enemyInteraction()
+comment7.params=
+comment7.target=int\ getPowerupsConsumed()
+comment8.params=
+comment8.target=int\ getLives()
+comment9.params=
+comment9.target=int\ getPowerupLimit()
+numComments=11

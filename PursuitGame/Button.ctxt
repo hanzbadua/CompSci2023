@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Button
+comment0.text=\r\n\ Class\ that\ represents\ a\ main\ menu\ button\r\n
+comment1.params=x\ y
+comment1.target=Button(int,\ int)
+comment2.params=text
+comment2.target=void\ displayText(java.lang.String)
+comment3.params=
+comment3.target=int\ getExpectantX()
+comment4.params=
+comment4.target=int\ getExpectantY()
+numComments=5

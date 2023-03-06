@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=LaserProjectile
+comment0.text=\r\n\ Actor\ that\ represents\ a\ laser\ projectile,\ which\ the\ player\ actor\ can\ fire\ at\ enemies\ to\ eliminate\ them\r\n\ (the\ player\ can\ only\ fire\ them\ after\ collecting\ all\ powerups)\r\n
+comment1.params=
+comment1.target=LaserProjectile()
+comment2.params=
+comment2.target=void\ act()
+numComments=3

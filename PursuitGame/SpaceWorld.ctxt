@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=SpaceWorld
+comment0.text=\r\n\ IMPORTANT\ NOTE\:\ \r\n\ This\ class\ (SpaceWorld)\ is\ the\ main\ class\ and\ is\ the\ world\ in\ where\ all\ the\ gameplay\ takes\ place/executes\ and\ therefore\ has\ the\ header\ comment\r\n\ But\ do\ NOT\ instantiate\ this\ class\ to\ start\ playing,\ INSTEAD\ instantiate\ the\ MainMenuWorld\ class\ to\ access\ the\ main\ menu\ and\ play\ from\ there\r\n\ \r\n\ A\ "pursuit\ game"\ taking\ place\ in\ space\r\n\ Has\ a\ main\ menu\ and\ different\ difficulties\ you\ can\ choose\ from\r\n\ You\ take\ control\ of\ the\ rocket\ ship,\ with\ enemies\ constantly\ pursuing\ you\r\n\ Colliding\ with\ the\ enemies\ makes\ you\ lose\ one\ life\ (extra\ note\:\ on\ Hard\ difficulty,\ you\ just\ die\ instantly\ upon\ one\ collision)\r\n\ Losing\ all\ your\ lives\ means\ you\ lose\ the\ game\r\n\ You\ can\ win\ the\ game\ by\ successfully\ avoiding\ the\ enemies\ whilst\ colliding\ powerups\ (yellow\ circles)\r\n\ Powerups\ will\ constantly\ make\ you\ bigger,\ and\ in\ certain\ incremements\ will\ also\ increase\ your\ speed\ (both\ of\ which\ likely\ make\ the\ game\ harder\ but\ whatever)\r\n\ Once\ you\ collect\ the\ required\ powerups\ (displayed\ at\ the\ top,\ required\ amount\ changes\ based\ on\ difficulty),\ you\ unlock\ the\ laser\ weapon\ and\ can\ no\ longer\ collect\ powerups\r\n\ Successfully\ firing\ the\ laser\ at\ an\ enemy\ permanently\ eliminates\ them\ from\ the\ game\r\n\ Eliminating\ all\ enemies\ with\ the\ laser\ means\ you\ win\ the\ game\ (\!\!\!)\r\n\ \r\n\ Controls\:\r\n\ Left/right\ arrow\ keys\ to\ turn\ left/right,\ respectively\r\n\ Hold\ the\ "D"\ key\ to\ decelerate\ to\ minimum\ speed,\ useful\ when\ you\ become\ too\ fast\ and\ need\ to\ manuever,\ also\ useful\ for\ aiming\ the\ laser\r\n\ Press\ the\ "F"\ key\ to\ fire\ your\ laser\ (once\ all\ required\ powerups\ are\ collected)\r\n\ Once\ you\ win\ or\ lose,\ you\ can\ press\ "R"\ to\ return\ back\ to\ the\ main\ menu\r\n\ And\ the\ main\ menu\ buttons\ need\ to\ be\ clicked\ on\r\n\ \r\n\ another\ note\:\r\n\ should\ probably\ play\ on\ normal\ difficulty\r\n\ easy\ difficulty\ is\ cartoonishly\ easy\r\n\ and\ hard\ difficulty\ is...\ a\ bit\ frustrating\r\n\ \r\n\ @author\ (Hanz\ Badua)\ \r\n\ @version\ (13\ Feb.\ 2023)\r\n
+comment1.params=d
+comment1.target=SpaceWorld(Difficulty)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ randomlyGenerateInitialObjects()
+comment4.params=
+comment4.target=boolean\ checkForWinCondition()
+comment5.params=
+comment5.target=Difficulty\ getDifficulty()
+numComments=6

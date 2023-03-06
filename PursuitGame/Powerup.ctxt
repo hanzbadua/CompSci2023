@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Powerup
+comment0.text=\r\n\ Class\ representing\ the\ "Powerup"\ actor\r\n\ When\ colliding\ with\ the\ PlayerChar\ actor,\ the\ powerup\ is\ consumed\ and\ some\ PlayerChar\ attributes\ change\ (such\ as\ speed/size)\r\n\ (this\ behavior\ is\ defined\ in\ the\ PlayerChar.powerupInteraction()\ method)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=Powerup()
+numComments=3
