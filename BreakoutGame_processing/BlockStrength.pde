@@ -15,8 +15,9 @@ enum BlockStrength {
       case TWO:
         return ONE;
       case ONE:
-      default:
         return null;
     }
+    
+    return null;
   }
 }

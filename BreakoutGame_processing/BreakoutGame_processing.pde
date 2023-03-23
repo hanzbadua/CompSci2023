@@ -1,6 +1,10 @@
 /*
  * Breakout game port to Processing  
  */
+ 
+import java.util.List;
+import java.util.Collections;
+
 // game constants
 // blocksX --> rows 
 // blocksY --> columns
@@ -11,8 +15,9 @@ final int blocksY = 6;
 Paddle paddle = new Paddle();
 Ball ball = new Ball();
 
+
 // stores all game blocks
-ArrayList<Block> blocks = new ArrayList<Block>();
+List<Block> blocks = Collections.synchronizedList(new ArrayList<Block>());
 
 color green = color(16, 255, 16); // green
 color orange = color(255, 172, 0); // orange
@@ -43,8 +48,11 @@ void draw() {
   // draw everything (paddle, ball, blocks)
   paddle.draw();
   ball.draw();
-  for (Block b: blocks) {
-    b.draw();
+  
+  synchronized(blocks) {
+    for (Block b: blocks) {
+      b.draw();
+    }
   }
 }
 
@@ -66,15 +74,18 @@ boolean ballCollidesWithRect(Ball c, Rectangle r) {
 }
 
 // get a random powerup for block generation
-// 90% chance to get paddlesize powerup
+// 70% chance to get paddlesize powerup
+// 20% chance to get an extra ball
 // 10% chance to get an extra life powerup
 BlockPowerup getRandomPowerup() {
   int r = int(random(101)); /// 0...100  
     
-  if (r > 90) // 90% chance
+  if (r > 30) // 70% chance
     return BlockPowerup.PADDLESIZE;
-  else // 5% chance
-      return BlockPowerup.EXTRALIFE;
+  else if (r > 10) // 20% chance
+    return BlockPowerup.EXTRABALL;
+  else // 10% chance
+    return BlockPowerup.EXTRALIFE;
 }
 
 // get a random block strength for block generation

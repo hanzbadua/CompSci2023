@@ -12,5 +12,15 @@ class Block extends Rectangle {
   void draw() {
     fill(getBlockStrengthColor(strength));
     rect(pos.x, pos.y, xside, yside);
+    collision();
+  }
+  
+  void collision() {
+    if (ballCollidesWithRect(ball, this))
+    {
+      strength = strength.downgrade();
+      if (strength == null)
+        blocks.remove(this);
+    }
   }
 }
