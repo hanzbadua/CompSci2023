@@ -6,15 +6,11 @@ class Ball {
   // circle
   int diameter = 20;
   
-  // to prevent faulty repeated collision
-  int iframes = IFRAMES_ON_RESET;
-  final static int IFRAMES_ON_RESET = 6; // 6 iframes means a tenth of a second at 60fps
-  
   // stores position
   PVector pos = new PVector(); 
   
   // stores velocity
-  PVector vel = new PVector(10, 10);
+  PVector vel = new PVector(12, 12);
   
   Ball() {
     // default ball positions
@@ -29,30 +25,20 @@ class Ball {
     
     circle(pos.x, pos.y, diameter);
     pos.add(vel); // movement based on velocity
-    
-    // decrement iframes every frame, but don't go negative
-    if (iframes > 0)
-      iframes--;
   }
   
   // handles all collision + bouncing physics, checks and logic, etc.
   void collision() {
-    // only bounce if iframes isn't 0
-    if (iframes > 0) 
-      return;
-    
     if (pos.x <= diameter || pos.x >= width - diameter) // left/right edge 
       vel.x *= -1; // flip
-    else if (pos.y <= diameter || pos.y >= height - diameter) // up/down edge
+    else if (pos.y <= diameter || pos.y >= height - diameter) { // up/down edge
       vel.y *= -1;
+      pos.y += ball.vel.y > 0 ? 10 : -10;
+    }
     // is colliding with paddle
-    else if (ballCollidesWithRect(this, paddle)) // collides with paddle
+    else if (ballCollidesWithRect(this, paddle)) { // collides with paddle
       vel.y *= -1;  
-    else if (ballCollidesWithAnyBlock(this)) // collide with any block
-      vel.y *= -1;
-    
-      
-    // reset iframes
-    iframes = IFRAMES_ON_RESET;
+      pos.y += ball.vel.y > 0 ? 10 : -10;
+    }
   }
 }

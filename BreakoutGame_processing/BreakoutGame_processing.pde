@@ -1,23 +1,26 @@
 /*
  * Breakout game port to Processing  
  */
- 
-import java.util.List;
-import java.util.Collections;
 
+// concurrent collection type which allows operations that would normally throw ConcurrentModificationException (such as removing an item from a collection whilst said collection is currently in use/being iterated over)
+// at a slight performance cost, but much safer than trying to make non-concurrent programming work with unintended operations
+import java.util.concurrent.ConcurrentLinkedQueue; // alternative type that can be used is CopyOnWriteArrayList, which has faster reads but much more expensive write operations
+ 
 // game constants
 // blocksX --> rows 
 // blocksY --> columns
 final int blocksX = 13;
 final int blocksY = 6;
 
-// main game stuff
+// main game stuff (variables, main objects, etc.)
 Paddle paddle = new Paddle();
 Ball ball = new Ball();
+int lives = 2;
 
-
-// stores all game blocks
-List<Block> blocks = Collections.synchronizedList(new ArrayList<Block>());
+// we must either use a dummy variable to mark block deletions
+// or use a concurrent collection type to avoid ConcurrentModificationException 
+// we are using the latter option which is slightly less performant but much safer
+ConcurrentLinkedQueue<Block> blocks = new ConcurrentLinkedQueue<Block>(); // stores all game blocks
 
 color green = color(16, 255, 16); // green
 color orange = color(255, 172, 0); // orange
@@ -29,7 +32,7 @@ void setup() {
   // fullScreen = set width/height to whole screen = assume 1920 * 1080
   fullScreen(P2D);
   
-  // ensure framerate is 60fps
+  // ensure framerate is 60fps, any other framerate = unintended game speed (because frametiming/deltatiming everything is too much work)
   frameRate(60);
   
   // in Processing by default, the x/y values of a rectangle represent the top-left corner of a rectangle
@@ -49,13 +52,34 @@ void draw() {
   paddle.draw();
   ball.draw();
   
-  synchronized(blocks) {
-    for (Block b: blocks) {
-      b.draw();
+  blockLogic();
+}
+
+// contains ball->block collision code, and block drawing code
+// this code is then called in the main draw() method directly, rather than being part of the Ball or Block class
+// for performance reasons
+void blockLogic() {
+  for (Block b: blocks) {
+    b.draw();
+    
+    if (ballCollidesWithRect(ball, b))
+    {
+      // flip y velocity of the ball
+      ball.vel.y *= -1;
+      
+      // based on the velocity being positive or negative, after the flip adjust the y position itself slightly to avoid unintended repeated collision issues
+      ball.pos.y += ball.vel.y > 0 ? 10 : -10;
+      
+      // remove powerup 
+      b.powerup = null;
+      
+      b.strength = b.strength.downgrade();
+      if (b.strength == null) {
+        blocks.remove(b);
+      }
     }
   }
 }
-
 
 // Code which allows us to check if a ball (circle) is colliding with a rectangle (Paddle/Block)
 // Code taken from https://stackoverflow.com/a/1879223 because geometry is too much work
@@ -74,17 +98,17 @@ boolean ballCollidesWithRect(Ball c, Rectangle r) {
 }
 
 // get a random powerup for block generation
-// 70% chance to get paddlesize powerup
-// 20% chance to get an extra ball
-// 10% chance to get an extra life powerup
+// 80% chance to get a paddle size powerup
+// 15% chance to get an extra ball
+// 5% chance to get an extra life powerup
 BlockPowerup getRandomPowerup() {
   int r = int(random(101)); /// 0...100  
     
-  if (r > 30) // 70% chance
+  if (r > 20) // 80% chance
     return BlockPowerup.PADDLESIZE;
-  else if (r > 10) // 20% chance
+  else if (r > 5) // 15% chance
     return BlockPowerup.EXTRABALL;
-  else // 10% chance
+  else // 5% chance
     return BlockPowerup.EXTRALIFE;
 }
 
@@ -131,19 +155,24 @@ void generateBlocks() {
       // (y+1)*b where b is y spacing
       // and overall x/y offset for all blocks appended to the end (- 150, +150, etc.)
       b.pos.x = ((x+1)*145) - 50;
-      b.pos.y = ((y+1)*50);
+      b.pos.y = ((y+1)*35);
       blocks.add(b);
     }
   }
 }
 
-// checks if ball is colliding with any block
-// by using the ball/rectangle collision method and looping over every block every frame (should be fast enough)
-boolean ballCollidesWithAnyBlock(Ball ball) {
-  for (Block b: blocks) {
-    if (ballCollidesWithRect(ball, b))
-      return true;
+// get respective powerup shape drawing
+PShape drawPowerupShape(Block b) {  
+  fill(0, 0, 255); // blue
+  
+  switch (b.powerup) {
+    case EXTRALIFE:
+      return createShape(TRIANGLE, b.pos.x - 15, b.pos.y + 15, b.pos.x, b.pos.y - 15, b.pos.x + 15, b.pos.y + 15);
+    case PADDLESIZE:
+      return createShape(RECT, b.pos.x, b.pos.y, 40, 15); 
+    case EXTRABALL:
+      return createShape(ELLIPSE, b.pos.x, b.pos.y, 15, 15);
   }
   
-  return false;
+  return null; 
 }

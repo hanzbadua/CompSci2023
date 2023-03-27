@@ -7,17 +7,16 @@ enum BlockStrength {
   
   
   // lower block strength to the next appropriate enumeration value
-  // if strength is already one, remove the block from the game world (by returning null as a signal)
+  // if strength is already one, return null instead (which is a signal to remove the block)
   BlockStrength downgrade() {
     switch (this) {
       case THREE:
-        return TWO;
+        return BlockStrength.TWO;
       case TWO:
-        return ONE;
+        return BlockStrength.ONE;
       case ONE:
+      default:
         return null;
     }
-    
-    return null;
   }
 }
