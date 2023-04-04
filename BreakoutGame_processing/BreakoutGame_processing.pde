@@ -1,5 +1,17 @@
 /*
  * Breakout game port to Processing  
+ * Similar to the Greenfoot version:
+ * Click to launch ball, use mouse cursor to move paddle, higher scores will increase your yspeed, proper win/game over screen and restart keybinds, etc.
+ *
+ * But lacks two main features: powerups and adjustable block generation 
+ * Mainly because I want to move on to other projects, but also because things such as extra balls would be even more performance-intensive as we lack a proper physics/collision engine
+ * and therefore every single block would have to loop over every single ball every frame in order to perform collision checks
+ *
+ * Known bugs: Balls clip into rectangles upon certain weird rectangle corner collisions, we try to prevent this by performing a position offset right after any collision
+ * but it's not perfect and the bug still happens from time to time
+ *
+ * @author (Hanz Badua)
+ * @version (04 April 2023)
  */
 
 // concurrent collection type which allows operations that would normally throw ConcurrentModificationException (such as removing an item from a collection whilst said collection is currently in use/being iterated over)
@@ -16,10 +28,15 @@ final int blocksY = 6;
 Paddle paddle = new Paddle();
 Ball ball = new Ball();
 int lives = 2;
+int score = 0;
+int countdownToNextYIncrement = 4;
+int countdownToNextCountdown = 5;
+boolean onGameOver = false;
+boolean won = false;
 
 // we must either use a dummy variable to mark block deletions
 // or use a concurrent collection type to avoid ConcurrentModificationException 
-// we are using the latter option which is slightly less performant but much safer
+// we are using the latter option which is slightly less performant but much safer (and the former option would also cause flickering due to non-concurrent code --> incomplete render cycles)
 ConcurrentLinkedQueue<Block> blocks = new ConcurrentLinkedQueue<Block>(); // stores all game blocks
 
 color green = color(16, 255, 16); // green
@@ -53,6 +70,36 @@ void draw() {
   ball.draw();
   
   blockLogic();
+  
+  fill(255); // for white text
+  textSize(30);
+  // text such as score, lives etc
+  text("Score: " + score, 250, 1000);
+  text("Extra balls: " + lives, 500, 1000);
+  
+  if (ball.held) // held ball --> give instructions
+  {
+    text("Left click to start", 850, 600);
+  }
+  
+  if (onGameOver || won) {
+    if (onGameOver)
+      text("Game over -- you lost with no extra balls remaining\nPress any key to restart", 600, 600);
+      
+    if (won) 
+      text("You won!\nPress any key to restart", 600, 600);
+      
+    if (keyPressed == true) {
+      ball = new Ball();
+      lives = 2;
+      score = 0;
+      countdownToNextYIncrement = 4;
+      countdownToNextCountdown = 5;
+      onGameOver = false;
+      won = false;
+      generateBlocks();
+    }
+  }
 }
 
 // contains ball->block collision code, and block drawing code
@@ -64,18 +111,22 @@ void blockLogic() {
     
     if (ballCollidesWithRect(ball, b))
     {
+      // collision = score increment
+      score++;
+      
       // flip y velocity of the ball
       ball.vel.y *= -1;
       
       // based on the velocity being positive or negative, after the flip adjust the y position itself slightly to avoid unintended repeated collision issues
       ball.pos.y += ball.vel.y > 0 ? 10 : -10;
       
-      // remove powerup 
-      b.powerup = null;
-      
       b.strength = b.strength.downgrade();
       if (b.strength == null) {
         blocks.remove(b);
+      }
+      
+      if (blocks.size() == 0) {
+        won = true; 
       }
     }
   }
@@ -96,22 +147,6 @@ boolean ballCollidesWithRect(Ball c, Rectangle r) {
   
   return distSquared < radiusSquared;
 }
-
-// get a random powerup for block generation
-// 80% chance to get a paddle size powerup
-// 15% chance to get an extra ball
-// 5% chance to get an extra life powerup
-BlockPowerup getRandomPowerup() {
-  int r = int(random(101)); /// 0...100  
-    
-  if (r > 20) // 80% chance
-    return BlockPowerup.PADDLESIZE;
-  else if (r > 5) // 15% chance
-    return BlockPowerup.EXTRABALL;
-  else // 5% chance
-    return BlockPowerup.EXTRALIFE;
-}
-
 // get a random block strength for block generation
 // 50% chance for strength one (green)
 // 25% chance for strength two (orange)
@@ -144,7 +179,6 @@ color getBlockStrengthColor(BlockStrength b) {
   }
 }
 
-
 // generate blocks
 void generateBlocks() {
   blocks.clear();
@@ -159,20 +193,4 @@ void generateBlocks() {
       blocks.add(b);
     }
   }
-}
-
-// get respective powerup shape drawing
-PShape drawPowerupShape(Block b) {  
-  fill(0, 0, 255); // blue
-  
-  switch (b.powerup) {
-    case EXTRALIFE:
-      return createShape(TRIANGLE, b.pos.x - 15, b.pos.y + 15, b.pos.x, b.pos.y - 15, b.pos.x + 15, b.pos.y + 15);
-    case PADDLESIZE:
-      return createShape(RECT, b.pos.x, b.pos.y, 40, 15); 
-    case EXTRABALL:
-      return createShape(ELLIPSE, b.pos.x, b.pos.y, 15, 15);
-  }
-  
-  return null; 
 }

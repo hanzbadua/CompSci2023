@@ -1,7 +1,7 @@
 // class that represents the paddle
 class Paddle extends Rectangle {
   Paddle() {
-    xside = 150; // set width
+    xside = 175; // set width
     yside = 20; // height
     pos.y = 900; // fixed
     // and xposition is dependent on mouse position (see draw())
