@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=FroggerWorld
+comment0.text=\r\n\ Up-down-left-right\ arrow\ keys\ to\ move,\ R\ to\ restart\ if\ required\r\n\ See\ test.lvl\ to\ see\ basic\ level\ template\r\n\ The\ right-most\ tile\ entry\ per\ row\ in\ the\ level\ file\ format\r\n\ is\ NOT\ a\ tile,\ its\ sActGen\ (see\ proper\ ids\ in\ Tile.getTileTypeByNumber(),\ and\ StreamingActorGenerator.getSActGenPresetById())\r\n\ \r\n\ Levels\ that\ play\ are\ ordered\ in\ LevelLoader.levelsToPlay\r\n\ \r\n\ Sprites\ from\:\r\n\ https\://opengameart.org/content/top-down-view-cars-and-trucks-racing-sprites\r\n\ https\://pixelartmaker.com/art/c3adfe62554ddcc\r\n\ \r\n\ @author\ (Hanz\ Badua)\r\n\ @version\ (15\ May\ 2023)\r\n
+comment1.params=
+comment1.target=FroggerWorld()
+comment2.params=_r\ _t
+comment2.target=Tile\ getTile(int,\ int)
+comment3.params=nextLevel
+comment3.target=void\ unloadCurrentLevel(Terrain[])
+comment4.params=ll
+comment4.target=boolean\ hasWon(LevelLoader)
+numComments=5

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=LunarLanderWorld
+comment0.text=\r\n\ Lunar\ Lander\ Game\r\n\ Try\ to\ land\ on\ the\ platforms,\ but\ slowly\!\r\n\ Press\ Space\ to\ thrust,\ use\ Left+Right\ arrow\ keys\ to\ turn\ \r\n\ You\ can't\ turn\ while\ landed,\ and\ approaching\ the\ platforms\ too\ hard\ or\ approaching\ the\ platforms\ from\ the\ bottom\ will\ cause\ a\ crash\r\n\ and\ prompt\ a\ restart\r\n\ You\ also\ crash\ when\ hitting\ an\ edge\r\n\ \r\n\ @author\ (Hanz\ Badua)\ \r\n\ @version\ (12\ June\ 2023)\r\n
+comment1.params=
+comment1.target=LunarLanderWorld()
+comment2.params=
+comment2.target=void\ prepare()
+numComments=3

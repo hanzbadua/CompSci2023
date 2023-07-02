@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Text
+comment0.text=\r\n\ Small\ actor\ to\ help\ with\ handling\ text\r\n\ much\ better\ than\ using\ showText()\ imo\r\n
+comment1.params=value\ size
+comment1.target=Text(java.lang.String,\ int)
+comment2.params=value\ size
+comment2.target=void\ modify(java.lang.String,\ int)
+numComments=3

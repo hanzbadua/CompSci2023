@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=LunarLander
+comment0.text=\r\n\ The\ Lunar\ Lander\r\n\ Hopefully\ physics\ work\ properly\r\n\ Remember\:\ positive\ y\ \=\ down,\ negative\ y\ \=\ up\r\n\ Also\ not\ going\ to\ lie,\ I\ kinda\ of\ just\ guessed\ how\ to\ use\ trig...\r\n
+comment1.params=
+comment1.target=LunarLander()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ physics()
+comment4.params=
+comment4.target=void\ controls()
+comment5.params=
+comment5.target=void\ setIdleImg()
+comment6.params=
+comment6.target=void\ setAccelImg()
+numComments=7

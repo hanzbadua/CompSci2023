@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=KnightUpgradeData
+comment0.text=\r\n\ Represents,\ well,\ a\ Knight\ tower's\ upgrade\ data\r\n\ Technically\ "upgrade\ data"\ classes\ should\ be\ extending\ a\ parent\ "upgrade\ data"\ class\r\n\ But\ compared\ to\ everything\ else\ that\ would\ be\ so\ much\ work\r\n\ Considering\ upgrades\ are\ different\ based\ on\ the\ tower\r\n\ And\ making\ it\ work\ with\ UI\ as\ well\ would\ be\ lots\ of\ fun\r\n
+comment1.params=
+comment1.target=KnightUpgradeData()
+numComments=2

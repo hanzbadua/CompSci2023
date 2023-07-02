@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Navnode
+comment0.text=\r\n\ Invisible\ actor\ used\ as\ reference\ position\ points\ for\ enemy\ actors\ to\ move\ to\r\n\ Works\ by\ having\ a\ collection\ of\ navnodes\ for\ each\ map,\ in\ a\ proper\ order\r\n\ Moving\ enemy\ actors\ turn\ towards\ each\ navnode\ -\ upon\ collision,\ turn\ towards\ the\ next\ navnode\ in\ order\r\n\ Until\ they\ reach\ the\ end\ of\ the\ nap\r\n
+comment1.params=x\ y
+comment1.target=Navnode(int,\ int)
+comment2.params=w
+comment2.target=void\ addedToWorld(greenfoot.World)
+numComments=3

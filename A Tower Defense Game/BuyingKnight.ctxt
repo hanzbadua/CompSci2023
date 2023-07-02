@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=BuyingKnight
+comment0.text=\r\n\ for\ buying\ a\ knight\ tower\r\n
+comment1.params=
+comment1.target=void\ setClassImage()
+comment2.params=
+comment2.target=int\ getPrice()
+comment3.params=
+comment3.target=int\ getRange()
+comment4.params=
+comment4.target=Tower\ getTower()
+numComments=5

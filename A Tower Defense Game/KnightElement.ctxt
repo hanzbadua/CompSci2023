@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=KnightElement
+comment0.text=\r\n\ Used\ to\ buy\ Knight\ towers\r\n
+comment1.params=
+comment1.target=void\ onClick()
+comment2.params=
+comment2.target=void\ setElementImage()
+numComments=3

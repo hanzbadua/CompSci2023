@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=LevelLoader
+comment0.text=\r\n\ Loads\ levels\ from\ files\ (with\ extension\ .lvl\ in\ the\ levels\ directory\ properly\ formatted)\r\n\ Level\ file\ format\ documentation\ soon\r\n\ NOTE\:\ ensure\ space\ 7,7\ is\ a\ safe\ tile;\ that\ is\ prolly\ gonna\ be\ the\ starting\ position\ for\ each\ level\ for\ the\ frog\r\n
+comment1.params=
+comment1.target=int\ getLevelIndex()
+comment2.params=
+comment2.target=Terrain[]\ getNextLevel()
+comment3.params=levelname
+comment3.target=Terrain[]\ loadLevel(java.lang.String)
+numComments=4

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=GameActor
+comment0.text=\r\n\ Placeholder\ class\ used\ for\ all\ "interactive"\ game\ objects/actos\r\n\ Ensure\ all\ relevant\ game\ objects\ have\ a\ "dangerous"\ property\ to\ check\ against\r\n
+comment1.params=
+comment1.target=boolean\ isDangerous()
+numComments=2

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Enemy
+comment0.text=\r\n\ Base\ class\ for\ all\ Enemy\ actors\r\n
+comment1.params=h\ s\ m
+comment1.target=Enemy(double,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ movement()
+comment4.params=
+comment4.target=void\ deathLogic()
+comment5.params=h
+comment5.target=void\ modifyHealth(double)
+comment6.params=
+comment6.target=void\ loadEnemyImage()
+numComments=7

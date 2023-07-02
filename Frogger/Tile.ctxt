@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Tile
+comment0.text=\r\n\ Tiles\ are\ the\ blocks\ that\ make\ up\ terrain\ rows\r\n\ A\ tile\ can\ represent\ a\ single\ obstacle,\ or\ a\ single\ safe\ space\ for\ the\ frog\ to\ jump\ on\ to\r\n
+comment1.params=
+comment1.target=boolean\ isDangerous()
+comment2.params=
+comment2.target=boolean\ isClosed()
+comment3.params=t\ row\ id
+comment3.target=Tile(TileType,\ int,\ int)
+comment4.params=num
+comment4.target=TileType\ getTileTypeByNumber(int)
+numComments=5

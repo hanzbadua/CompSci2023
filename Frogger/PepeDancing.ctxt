@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=PepeDancing
+comment0.text=\r\n\ The\ best\ Alligator\ substitute\ there\ is\r\n
+comment1.params=speed
+comment1.target=PepeDancing(int)
+comment2.params=_w
+comment2.target=void\ addedToWorld(greenfoot.World)
+comment3.params=
+comment3.target=void\ stopTimer()
+comment4.params=
+comment4.target=boolean\ isGlideable()
+comment5.params=
+comment5.target=boolean\ isDangerous()
+comment6.params=
+comment6.target=boolean\ checkForDestruction()
+numComments=7

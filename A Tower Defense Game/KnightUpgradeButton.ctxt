@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=KnightUpgradeButton
+comment0.text=\r\n\ For\ Knight\ tower\ upgrades\r\n
+comment1.params=onClick\ ref
+comment1.target=KnightUpgradeButton(KnightUpgradeButtonRunnable,\ Knight)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

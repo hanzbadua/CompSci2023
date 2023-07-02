@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Projectile
+comment0.text=\r\n\ Class\ that\ represents\ all\ tower\ attack\ actors\ (even\ melee\ effects)\r\n
+comment1.params=d\ rotation
+comment1.target=Projectile(double,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ logic()
+comment4.params=
+comment4.target=void\ loadProjectileImage()
+numComments=5

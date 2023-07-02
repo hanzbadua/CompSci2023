@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Canvas
+comment0.text=\r\n\ Represents\ the\ base\ image\ of\ the\ game\ world,\ including\ barebone\ textures\ such\ as\ valid\ tower\ area\ and\ valid\ enemy\ pathing\r\n\ should\ be\ 960\ by\ 720\ (720\ with\ 1/4\ of\ the\ width\ removed),\ if\ not\ a\ forced\ resize\ will\ occur\r\n
+comment1.params=
+comment1.target=Canvas()
+comment2.params=w\ collection
+comment2.target=void\ loadToWorld(greenfoot.World,\ Navnode[])
+numComments=3

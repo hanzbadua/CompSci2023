@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.target=TileType
+comment0.text=\r\n\ Enum\ which\ represents\ all\ different\ tile\ types\ (field\ tile,\ varying\ obstacle\ tiles,\ etc.)\r\n\ Tiles\ make\ up\ terrain\r\n
+numComments=1

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=UICanvas
+comment0.text=\r\n\ Represents\ the\ base\ for\ the\ non-game\ area\ containing\ the\ tower\ menu\ (buying\ new\ towers,\ upgrading\ current\ towers,\ etc.)\r\n\ Should\ be\ 320\ *\ 720\ resolution\ placed\ at\ 1120,360\r\n
+comment1.params=
+comment1.target=UICanvas()
+comment2.params=w
+comment2.target=void\ addedToWorld(greenfoot.World)
+numComments=3

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=KnightAttack
+comment0.text=\r\n\ Projectile\ which\ represents\ knight\ melee\ attack\r\n
+comment1.params=d\ r\ lt
+comment1.target=KnightAttack(double,\ int,\ double)
+comment2.params=
+comment2.target=void\ logic()
+comment3.params=
+comment3.target=void\ loadProjectileImage()
+comment4.params=w
+comment4.target=void\ addedToWorld(greenfoot.World)
+numComments=5

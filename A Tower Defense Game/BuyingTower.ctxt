@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=BuyingTower
+comment0.text=\r\n\ Class\ to\ help\ with\ purchasing\ towers\r\n
+comment1.params=
+comment1.target=BuyingTower()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ setClassImage()
+comment4.params=
+comment4.target=int\ getPrice()
+comment5.params=
+comment5.target=int\ getRange()
+comment6.params=
+comment6.target=Tower\ getTower()
+comment7.params=w
+comment7.target=void\ addedToWorld(greenfoot.World)
+numComments=8

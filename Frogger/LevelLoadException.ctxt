@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=LevelLoadException
+comment0.text=\r\n\ Custom\ exception\ for\ failed\ level\ loads\r\n\ We\ are\ inheriting\ RuntimeException\ as\ opposed\ to\ Exception\ as\ you\ must\ inherit\ RuntimeException\ for\ \r\n\ unchecked\ exceptions\ (exceptions\ that\ don't\ need\ to\ be\ caught\ or\ handled\ via\ throws\ statement)\r\n
+comment1.params=msg
+comment1.target=LevelLoadException(java.lang.String)
+numComments=2

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=PepeD
+comment0.text=\r\n\ main\ game\ enemy\r\n
+comment1.params=hp
+comment1.target=PepeD(double)
+comment2.params=
+comment2.target=void\ loadEnemyImage()
+numComments=3

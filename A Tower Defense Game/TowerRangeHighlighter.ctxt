@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=TowerRangeHighlighter
+comment0.text=\r\n\ Visually\ represents\ a\ towers\ range\ when\ buying\ it\ \ \r\n\ Will\ also\ be\:\ blue\ if\ valid\ to\ place,\ red\ if\ not\r\n
+comment1.params=range
+comment1.target=TowerRangeHighlighter(int)
+comment2.params=
+comment2.target=void\ toValidState()
+comment3.params=
+comment3.target=void\ toInvalidState()
+comment4.params=
+comment4.target=void\ hide()
+numComments=5

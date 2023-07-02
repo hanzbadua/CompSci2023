@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=StreamingActorGenerator
+comment0.text=\r\n\ Invisible\ actor\ which\ can\ repeatedly\ spawn\ StreamingActor\ objects\ every\ specified\ interval\r\n\ all\ publicly\ exposed\ fields\ are\ immutable\r\n
+comment1.params=speed\ interval\ sActor
+comment1.target=StreamingActorGenerator(int,\ long,\ StreamingActorType)
+comment2.params=_w
+comment2.target=void\ addedToWorld(greenfoot.World)
+comment3.params=
+comment3.target=void\ stop()
+comment4.params=id
+comment4.target=StreamingActorGenerator\ getSActGenPresetById(int)
+numComments=5

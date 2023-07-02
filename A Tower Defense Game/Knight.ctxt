@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Knight
+comment0.text=\r\n\ Knight\:\ melee\ tower,\ intended\ to\ be\ the\ first\ tower\ the\ player\ uses\r\n
+comment1.params=
+comment1.target=Knight()
+comment2.params=
+comment2.target=void\ registerFiringBehavior()
+comment3.params=
+comment3.target=void\ loadTowerImage()
+comment4.params=
+comment4.target=void\ act()
+comment5.params=w
+comment5.target=void\ setupUpgradeUI(TowerDefenseWorld)
+numComments=6

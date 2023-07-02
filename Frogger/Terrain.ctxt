@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Terrain
+comment0.text=\r\n\ Represents\ a\ row\ in\ the\ game\ world,\ consisting\ of\ varying\ randomly-generated\ obstacles\ &\ valid\ terrain\ for\ the\ frog\ to\ jump\ on\ (represented\ as\ Tiles)\r\n
+comment1.params=tilesArg\ row\ sActGen
+comment1.target=Terrain(Tile[],\ int,\ StreamingActorGenerator)
+comment2.params=w
+comment2.target=void\ addToWorld(greenfoot.World)
+numComments=3

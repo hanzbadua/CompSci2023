@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Tower
+comment0.text=\r\n\ Base\ class\ for\ a\ tower,\ inheriting\ classes\ must\ override\ methods/super()\ call\ properly\ to\ provide\ necessary\ data\ \r\n\ (such\ as\ upgrade\ paths,\ stat\ initialization,\ projectile\ firing\ behavior,\ special\ effects\ such\ as\ crowd\ control,\ and\ more)\r\n
+comment1.params=d\ r\ fr
+comment1.target=Tower(double,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=w
+comment3.target=void\ addedToWorld(greenfoot.World)
+comment4.params=
+comment4.target=void\ turnTowardsValidEnemy()
+comment5.params=
+comment5.target=Enemy\ getClosestValidEnemy()
+comment6.params=
+comment6.target=void\ loadTowerImage()
+comment7.params=
+comment7.target=void\ registerFiringBehavior()
+numComments=8

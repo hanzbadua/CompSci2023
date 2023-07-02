@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=StreamingActor
+comment0.text=\r\n\ Class\ which\ helps\ with\ handling\ data\ of\ a\ streaming\ actor\ (required\ methods/fields\ etc.)\r\n
+comment1.params=
+comment1.target=boolean\ isGlideable()
+comment2.params=speed
+comment2.target=StreamingActor(int)
+comment3.params=
+comment3.target=boolean\ checkForDestruction()
+comment4.params=
+comment4.target=void\ act()
+numComments=5

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=WinWorld
+comment0.text=\r\n\ Shown\ if\ the\ player\ wins\ (beats\ all\ levels)\r\n
+comment1.params=
+comment1.target=WinWorld()
+numComments=2

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=KnightUpgradeButtonRunnable
+comment0.text=\r\n\ Functional\ interface\ to\ pass\ methods\ as\ arguments\r\n\ See\ https\://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html\ for\ more\ info\r\n\ This\ functional\ interface\ is\ used\ for\ upgrade\ buttons\r\n
+comment1.params=k
+comment1.target=void\ run(Knight)
+numComments=2

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Car
+comment1.params=speed
+comment1.target=Car(int)
+comment2.params=
+comment2.target=boolean\ isGlideable()
+comment3.params=
+comment3.target=boolean\ isDangerous()
+numComments=4

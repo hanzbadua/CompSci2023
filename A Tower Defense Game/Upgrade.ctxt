@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Upgrade
+comment0.text=\r\n\ Represents\ metadata\ for\ a\ single\ tower\ upgrade\ (name,\ tiers,\ costs,\ etc.)\r\n\ Upgrade\ cost\ formula\:\ initcost\ +\ (tier\ *\ initcost/2);\r\n
+comment1.params=name\ maxTiers\ incrementValue\ initialCost
+comment1.target=Upgrade(java.lang.String,\ int,\ double,\ int)
+numComments=2
