@@ -1,4 +1,6 @@
-My submissions for computer science class projects (Grade 12, Class of 2023)
+My submissions for computer science class projects (grade 12)
+
+All projects except for BreakoutGame_processing (which runs in Processing) is made/runs in Greenfoot
 
 All code is my own and licensed under the MIT License (unless otherwise specified, and is credited properly in that case)
 
